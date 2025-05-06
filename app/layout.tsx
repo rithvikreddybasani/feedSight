@@ -6,6 +6,7 @@ import { Providers } from './provider';
 import Navigaton from '@/components/Navigaton';
 import Footer from '@/components/Footer';
 import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -44,6 +45,11 @@ export default function RootLayout({
             <main className="">{children}</main>
             <Footer/>
           </ThemeProvider>
+          <Script
+  defer
+  data-domain="feed-sight-rithvik.vercel.app"
+  src="https://webtracker.avikmukherjee.tech/tracking-script.js"
+/>
         </body>
       </html>
     </Providers>
